@@ -1,0 +1,26 @@
+{
+  "name": "react-pirate",
+  "version": "1.0.0",
+  "description": "Sets of useful hooks for react 16.7 and above",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dispix/react-pirate.git"
+  },
+  "keywords": [
+    "react",
+    "library"
+  ],
+  "author": "Octave \"dispix\" Raimbault <me@dispix.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dispix/react-pirate/issues"
+  },
+  "homepage": "https://github.com/dispix/react-pirate#readme",
+  "peerDependencies": {
+    "react": ">=16.7.0-alpha.0"
+  }
+}
