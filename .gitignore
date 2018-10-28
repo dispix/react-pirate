@@ -1,7 +1,6 @@
+# Build
+build/
 
-# Created by https://www.gitignore.io/api/node
-
-### Node ###
 # Logs
 logs
 *.log
@@ -41,5 +40,3 @@ node_modules/
 
 # dotenv environment variables file
 .env
-
-# End of https://www.gitignore.io/api/node
