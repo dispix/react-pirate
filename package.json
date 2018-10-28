@@ -1,6 +1,6 @@
 {
   "name": "react-pirate",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Sets of useful hooks for react 16.7 and above",
   "main": "./build/index.cjs.js",
   "scripts": {
