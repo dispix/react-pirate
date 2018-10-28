@@ -1,8 +1,8 @@
 {
   "name": "react-pirate",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Sets of useful hooks for react 16.7 and above",
-  "main": "./main/index.cjs.js",
+  "main": "./build/index.cjs.js",
   "scripts": {
     "test": "test",
     "prepublish": "rollup -c"
