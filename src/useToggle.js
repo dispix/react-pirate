@@ -1,6 +1,11 @@
 import { useState } from 'react'
 
-export default function useToggle(initialValue) {
+/**
+ * Stores a boolean and offers methods to update it.
+ * @param {boolean} initialValue
+ * @return {object} a toggle object with the current value and update methods
+ */
+export default function useToggle(initialValue = true) {
   const [value, setValue] = useState(initialValue)
 
   return {

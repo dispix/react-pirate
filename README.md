@@ -47,11 +47,11 @@ yarn add react-pirate
   }
   ```
 
-- `useTimeout` and `useInterval` are using for timing:
+- `useTimeout` and `useInterval` are used for timing:
 
   ```jsx
   import React, { useState } from 'react'
-  import { useTimout, useInterval, usePrevious } from 'react-pirate'
+  import { useTimeout, useInterval, usePrevious } from 'react-pirate'
 
   function Pirate(props) {
     const [currentTime, setCurrentTime] = useState(0)
@@ -85,6 +85,30 @@ yarn add react-pirate
 
     return (
       <p>{props.name} can't sail for too long or it'll run out of water!</p>
+    )
+  }
+  ```
+
+- `useToggle` to easily manage a boolean value:
+
+  ```jsx
+  import React from 'react'
+  import { useToggle } from 'react-pirate'
+
+  function Pirate(props) {
+    const sleeping = useToggle(false)
+
+    if (props.isNight) {
+      sleeping.setTrue()
+    }
+
+    return (
+      <div>
+        <p>I am {sleeping.value ? 'sleeping' : 'awake'} right now.</p>
+        <button onClick={sleeping.toggle}>
+          {sleeping.value ? 'Wake up' : 'Sleep'}
+        </button>
+      </div>
     )
   }
   ```
