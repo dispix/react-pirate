@@ -2,10 +2,10 @@
   "name": "react-pirate",
   "version": "1.1.2",
   "description": "Sets of useful hooks for react 16.7 and above",
-  "main": "./build/index.cjs.js",
+  "main": "index.js",
   "scripts": {
     "test": "test",
-    "prepublish": "rollup -c"
+    "prepublish": "rollup -c -m"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/dispix/react-pirate#readme",
   "files": [
-    "build",
+    "index.d.ts",
+    "index.js",
+    "index.js.map",
     "package.json",
     "README.md"
   ],

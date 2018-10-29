@@ -1,5 +1,6 @@
 # Build
-build/
+index.js
+index.js.map
 
 # Logs
 logs
