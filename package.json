@@ -16,7 +16,7 @@
     "library"
   ],
   "author": "Octave \"dispix\" Raimbault <me@dispix.net>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dispix/react-pirate/issues"
   },
