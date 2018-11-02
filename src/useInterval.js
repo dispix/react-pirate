@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useCallback } from 'react'
 
 /**
  * Wraps `setInterval`. Triggers the function each interval.
@@ -7,8 +7,9 @@ import { useEffect } from 'react'
  * @return {void}
  */
 export default function useInterval(fn, interval) {
+  const memoizedFn = useCallback(fn)
   useEffect(() => {
-    const id = setInterval(fn, interval)
+    const id = setInterval(memoizedFn, interval)
     return () => clearInterval(id)
-  })
+  }, [])
 }
