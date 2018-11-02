@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useCallback } from 'react'
 
 /**
  * Triggers the function when the component is unmounted. You can pass options
@@ -10,5 +10,6 @@ import { useEffect } from 'react'
  * @return {void}
  */
 export default function useUnmount(fn, { hook = useEffect } = {}) {
-  hook(() => fn, [])
+  const memoizedFn = useCallback(fn)
+  hook(() => memoizedFn, [])
 }
