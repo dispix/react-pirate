@@ -62,7 +62,7 @@ yarn add react-pirate
       setPreviousTime(currentTime)
     }
 
-    setInterval(() => setCurrentTime(currentTime + 1000), 1000)
+    useInterval(() => setCurrentTime(currentTime + 1000), 1000)
 
     return (
       <div>
@@ -78,7 +78,7 @@ yarn add react-pirate
 
   function Ship(props) {
     useTimeout(() => {
-      if (props.isAtSee) {
+      if (props.isAtSea) {
         props.returnToPort()
       }
     }, 1000)
@@ -122,7 +122,7 @@ Lifecycle hooks helps you simulate your good ol' `React.Component` lifecycle met
 - `componentDidMount`:
 
   ```jsx
-  import React, { useLayout } from 'react'
+  import React, { useLayoutEffect } from 'react'
   import { useMount } from 'react-pirate'
 
   function Ship(props) {
@@ -130,7 +130,7 @@ Lifecycle hooks helps you simulate your good ol' `React.Component` lifecycle met
       // quite similar to `componentDidMount`
     })
 
-    return <p>This is my Ship, it's name is {props.name}</p>
+    return <p>This is my Ship, its name is {props.name}</p>
   }
 
   function Captain(props) {
@@ -138,7 +138,7 @@ Lifecycle hooks helps you simulate your good ol' `React.Component` lifecycle met
       () => {
         // similar to `componentDidMount`
       },
-      { hook: useLayout },
+      { hook: useLayoutEffect },
     )
 
     return <p>This is the captain of the {props.shipName} !</p>
@@ -148,7 +148,7 @@ Lifecycle hooks helps you simulate your good ol' `React.Component` lifecycle met
 - `componentDidUpdate`:
 
   ```jsx
-  import React, { useLayout } from 'react'
+  import React, { useLayoutEffect } from 'react'
   import { useUpdate, useLegacyUpdate } from 'react-pirate'
 
   function Ship(props) {
@@ -156,7 +156,7 @@ Lifecycle hooks helps you simulate your good ol' `React.Component` lifecycle met
       // quite similar to `componentDidUpdate`
     })
 
-    return <p>This is my Ship, it's name is {props.name}</p>
+    return <p>This is my Ship, its name is {props.name}</p>
   }
 
   function Captain(props) {
@@ -164,7 +164,7 @@ Lifecycle hooks helps you simulate your good ol' `React.Component` lifecycle met
       () => {
         // similar to `componentDidUpdate`
       },
-      { hook: useLayout },
+      { hook: useLayoutEffect },
     )
 
     return <p>This is the captain of the {props.shipName} !</p>
@@ -174,7 +174,7 @@ Lifecycle hooks helps you simulate your good ol' `React.Component` lifecycle met
 - `componentWillUnmount`:
 
   ```jsx
-  import React, { useLayout } from 'react'
+  import React, { useLayoutEffect } from 'react'
   import { useUnmount, useLegacyUnmount } from 'react-pirate'
 
   function Ship(props) {
@@ -182,7 +182,7 @@ Lifecycle hooks helps you simulate your good ol' `React.Component` lifecycle met
       // quite similar to `componentWillUnmount`
     })
 
-    return <p>This is my Ship, it's name is {props.name}</p>
+    return <p>This is my Ship, its name is {props.name}</p>
   }
 
   function Captain(props) {
@@ -190,7 +190,7 @@ Lifecycle hooks helps you simulate your good ol' `React.Component` lifecycle met
       () => {
         // similar to `componentWillUnmount`
       },
-      { hook: useLayout },
+      { hook: useLayoutEffect },
     )
 
     return <p>This is the captain of the {props.shipName} !</p>
@@ -203,7 +203,7 @@ Lifecycle hooks helps you simulate your good ol' `React.Component` lifecycle met
   import React from 'react'
   import { useState } from 'react'
 
-  function Firstmate(props) {
+  function FirstMate(props) {
     const [captain, setCaptain] = useState(null)
 
     if (!captain && props.ship) {
