@@ -6,9 +6,20 @@ import { useEffect } from 'react'
  * @param {number} delay in milliseconds
  * @return {void}
  */
-export default function useInterval(fn, interval) {
+export default function useInterval(fn, delay) {
+  const savedCallback = useRef()
+
   useEffect(() => {
-    const id = setInterval(fn, interval)
-    return () => clearInterval(id)
+    savedCallback.current = fn
   })
+
+  useEffect(() => {
+    function tick() {
+      savedCallback.current()
+    }
+    if (delay !== null) {
+      const id = setInterval(tick, delay)
+      return () => clearInterval(id)
+    }
+  }, [delay])
 }
