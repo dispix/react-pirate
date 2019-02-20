@@ -7,8 +7,19 @@ import { useEffect } from 'react'
  * @return {void}
  */
 export default function useTimeout(fn, delay) {
+  const savedCallback = useRef()
+
   useEffect(() => {
-    const id = setTimeout(fn, delay)
-    return () => clearTimeout(id)
+    savedCallback.current = fn
   })
+
+  useEffect(() => {
+    function cb() {
+      savedCallback.current()
+    }
+    if (delay !== null) {
+      const id = setTimeout(cb, delay)
+      return () => clearTimeout(id)
+    }
+  }, [delay])
 }
