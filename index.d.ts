@@ -1,7 +1,7 @@
-export function useInterval(fn: Function, delay: number): void
-export function useMount(fn: Function): void
+export function useInterval(fn: () => void, delay: number): void
+export function useMount(fn: () => void): void
 export function usePrevious<T>(value: T): T
-export function useTimeout(fn: Function, delay: number): void
+export function useTimeout(fn: () => void, delay: number): void
 export function useToggle(
   initialValue: boolean,
 ): {
@@ -11,5 +11,5 @@ export function useToggle(
   setTrue: () => void
   setFalse: () => void
 }
-export function useUnmount(fn: Function): void
-export function useUpdate(fn: Function): void
+export function useUnmount(fn: () => void): void
+export function useUpdate(fn: () => void): void
