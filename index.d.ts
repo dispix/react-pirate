@@ -13,3 +13,4 @@ export function useToggle(
 }
 export function useUnmount(fn: Function): void
 export function useUpdate(fn: Function): void
+export function useDelayedLoader(loading: boolean, delayMs: number): boolean
